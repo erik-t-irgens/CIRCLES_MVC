@@ -75,7 +75,7 @@ body {
   right:0;
   overflow:hidden;
   z-index:-1;
-  background-color: #41d7e8;
+  background-color: #6e6e6e;
 }
 
 #landingTitle {
@@ -85,7 +85,8 @@ body {
   position: absolute;
   margin-top: 250px;
   font-family: 'Monoton', cursive;
-  color: #6e6e6e;
+  color: white;
+  width: 50%;
 }
 
 #loginTitle {
@@ -222,11 +223,35 @@ body {
 
 }
 
+/* Form styles
+-------------------------------------------------- */
+
+input {
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+
 /* Button styles
 -------------------------------------------------- */
 
 .button-styling {
 
+  border: 4px solid #535353;
+  color: white;
+  width: 50%;
+}
+
+.button-styling-solid, #button-started {
+
+  border: 4px solid #6e6e6e;
+  color: white;
+  width: 50%;
+  background-color: #535353;
+  margin-bottom: 10px;
+}
+
+#button-started {
+  width: 90%;
 }
 
 
