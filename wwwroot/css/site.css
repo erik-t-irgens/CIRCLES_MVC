@@ -53,11 +53,14 @@ body {
   text-align: center;
   bottom: 0;
   width: 100%;
+  color: white !important;
   white-space: nowrap;
   /* Set the fixed height of the footer here */
-  height: 60px;
-  line-height: 60px; /* Vertically center the text there */
-  background-color: white;
+  height: 30px;
+  line-height: 30px; /* Vertically center the text there */
+  background-color: #535353;
+  opacity: .7;
+  z-index: 0;
 } 
 
 /* Landing page styles
@@ -67,7 +70,6 @@ body {
   position:absolute;
   margin: 0;
   padding: 0;
-  
   width: 100%;
   top:0;
   bottom:0;
@@ -80,17 +82,19 @@ body {
 
 #landingTitle {
   border: 100px;
-  z-index: 0;
-  margin-left: 50px;
+  z-index: 1;
+  margin-left: 20vw;
+  margin-bottom: 500px;
   position: absolute;
-  margin-top: 250px;
+  margin-top: 20vh;
   font-family: 'Monoton', cursive;
   color: white;
   width: 50%;
+  text-shadow: 5px 5px 5px #6e6e6e;
 }
 
 #loginTitle {
-  z-index: 0;
+  z-index: 1;
   margin-top: 15%;
   font-family: 'Monoton', cursive;
   color: #6e6e6e;
@@ -112,12 +116,37 @@ body {
   background-color: #00ffff;
   border-radius: 100%;
   display: inline-block;
-  z-index: -3;
+  z-index: 0;
   position: relative;
-  border: 30px solid #6e6e6e;
    /* top, right, bottom left */
   margin: 15% 60% 85% 40%;
+}
 
+#landingCircle2{
+  height: 40vh;
+  width: 40vh;
+  background-color: #fff565;
+  border-radius: 100%;
+  display: inline-block;
+  z-index: -4;
+  position: sticky;
+   /* top, right, bottom left */
+  bottom: 0;
+  margin: 5% 80% 95% 20%;
+}
+
+#landingCircle3{
+  height: 500px;
+  width: 500px;
+  background-color: rgb(255, 121, 31);
+  border-radius: 100%;
+  display: inline-block;
+  z-index: -2;
+  position: absolute;
+   /* top, right, bottom left */
+  top: 0;
+  right: 0;
+  margin: 5vh 80% 95vh 20%;
 }
 
 #loginCircle {
@@ -130,7 +159,6 @@ body {
   border-radius: 100%;
   display: inline-block;
   position: sticky;
-  border: 30px solid #6e6e6e;
   
 }
 
@@ -222,6 +250,7 @@ body {
   }
 
 }
+
 
 /* Form styles
 -------------------------------------------------- */
