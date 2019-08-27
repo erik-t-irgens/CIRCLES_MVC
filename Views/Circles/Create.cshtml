@@ -1,0 +1,18 @@
+
+@{
+    Layout = "_Layout";
+}
+
+<h1>Add a New Circle</h1>
+<hr>
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        <label for="Name">Name</label>
+        <input name="Name" type="text" class="form-control" required>
+    </div>
+
+
+    <input type="submit" value="Add Circle" class="btn btn-primary"/><br><br>
+    @Html.ActionLink("Cancel", "Index")
+}

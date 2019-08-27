@@ -1,0 +1,16 @@
+  
+@{
+    Layout = "_Layout";
+}
+
+@model IEnumerable<Circles_MVC.Models.Circle>
+
+<h2>All Circles</h2>
+<hr />
+
+@foreach (var circle in Model)
+{
+    <ul>
+        <li>Name: @Html.ActionLink($"{circle.Name}", "Details", new { id = circle.CircleId})</li>
+    </ul>
+}
