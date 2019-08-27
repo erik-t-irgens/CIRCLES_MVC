@@ -23,8 +23,6 @@
 /Users/Guest/Desktop/Circles_MVC/obj/Debug/netcoreapp2.2/Razor/Views/Home/Index.g.cshtml.cs
 /Users/Guest/Desktop/Circles_MVC/obj/Debug/netcoreapp2.2/Razor/Views/Home/Landing.g.cshtml.cs
 /Users/Guest/Desktop/Circles_MVC/obj/Debug/netcoreapp2.2/Razor/Views/Home/Privacy.g.cshtml.cs
-/Users/Guest/Desktop/Circles_MVC/obj/Debug/netcoreapp2.2/Razor/Views/OtherUsers/Details.g.cshtml.cs
-/Users/Guest/Desktop/Circles_MVC/obj/Debug/netcoreapp2.2/Razor/Views/OtherUsers/Index.g.cshtml.cs
 /Users/Guest/Desktop/Circles_MVC/obj/Debug/netcoreapp2.2/Razor/Views/Shared/Error.g.cshtml.cs
 /Users/Guest/Desktop/Circles_MVC/obj/Debug/netcoreapp2.2/Razor/Views/Shared/Footer.g.cshtml.cs
 /Users/Guest/Desktop/Circles_MVC/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_CookieConsentPartial.g.cshtml.cs
@@ -41,3 +39,4 @@
 /Users/Guest/Desktop/Circles_MVC/obj/Debug/netcoreapp2.2/Circles_MVC.dll
 /Users/Guest/Desktop/Circles_MVC/obj/Debug/netcoreapp2.2/Circles_MVC.pdb
 /Users/Guest/Desktop/Circles_MVC/obj/Debug/netcoreapp2.2/Circles_MVC.csproj.CopyComplete
+/Users/Guest/Desktop/CIRCLES_MVC/obj/Debug/netcoreapp2.2/Razor/Views/UserProfile/Details.g.cshtml.cs

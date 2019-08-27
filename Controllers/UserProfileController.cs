@@ -12,7 +12,14 @@ namespace Circles_MVC.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var allUserprofiles = Userprofile.GetAllUserprofiles();
+            return View(allUserprofiles);
+        }
+
+        public IActionResult Details(int id)
+        {
+            var thisUserprofile = Userprofile.GetThisUserprofile(id);
+            return View(thisUserprofile);
         }
 
         public IActionResult Edit()

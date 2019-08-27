@@ -1,5 +1,5 @@
 {
-  "FilePath": "/Users/Guest/Desktop/Circles_MVC/Circles_MVC.csproj",
+  "FilePath": "/Users/Guest/Desktop/CIRCLES_MVC/Circles_MVC.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-2.1",
     "LanguageVersion": "2.1",
@@ -2961,8 +2961,8 @@
   "RootNamespace": "Circles_MVC",
   "Documents": [
     {
-      "FilePath": "Views/OtherUsers/Details.cshtml",
-      "TargetPath": "Views/OtherUsers/Details.cshtml",
+      "FilePath": "Views/UserProfile/Details.cshtml",
+      "TargetPath": "Views/UserProfile/Details.cshtml",
       "FileKind": "mvc"
     },
     {

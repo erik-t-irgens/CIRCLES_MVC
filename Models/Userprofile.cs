@@ -2,12 +2,18 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using RestSharp;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using Microsoft.EntityFrameworkCore;
+
+using System.Threading.Tasks;
 
 namespace Circles_MVC.Models
 {
 
     public class Userprofile
-    {                                
+    {
         public int UserprofileId { get; set; }
         public string Name { get; set; }
         public string Gender { get; set; }
@@ -19,5 +25,44 @@ namespace Circles_MVC.Models
 
         public ICollection<TagUserprofile> Tags { get; set; }
         public ICollection<CircleUserprofile> Circles { get; set; }
+
+
+        public static List<Userprofile> GetAllUserprofiles()
+        {
+            var client = new RestClient("http://localhost:5000/api/");
+            var request = new RestRequest("userprofiles/", Method.GET);
+            var response = new RestResponse();
+
+            Task.Run(async () =>
+            {
+                response = await GetAsyncResponse.GetResponseContentAsync(client, request) as RestResponse;
+            }).Wait();
+
+            JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(response.Content);
+            var userprofileList = JsonConvert.DeserializeObject<List<Userprofile>>(jsonResponse.ToString());
+            return userprofileList;
+        }
+
+
+
+        public static Userprofile GetThisUserprofile(int id)
+        {
+            var client = new RestClient("http://localhost:5000/api/");
+            var request = new RestRequest("userprofiles/" + id, Method.GET);
+            var response = new RestResponse();
+
+            Task.Run(async () =>
+            {
+                response = await GetAsyncResponse.GetResponseContentAsync(client, request) as RestResponse;
+            }).Wait();
+
+            JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(response.Content);
+            var thisUserprofile = JsonConvert.DeserializeObject<Userprofile>(jsonResponse.ToString());
+            return thisUserprofile;
+        }
+
+
     }
+
+
 }
