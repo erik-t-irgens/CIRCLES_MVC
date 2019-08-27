@@ -22,15 +22,25 @@ namespace Circles_MVC.Controllers
             return View(thisUserprofile);
         }
 
-        public IActionResult Edit()
-        {
-            return View();
-        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Errors()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public IActionResult Edit(int id)
+        {
+            var thisUserprofile = Userprofile.GetThisUserprofile(id);
+            return View(thisUserprofile);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(int id, Userprofile userprofile)
+        {
+            Userprofile.EditUserprofile(id, userprofile);
+            return RedirectToAction("Index");
         }
     }
 }

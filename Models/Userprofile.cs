@@ -60,6 +60,19 @@ namespace Circles_MVC.Models
             var thisUserprofile = JsonConvert.DeserializeObject<Userprofile>(jsonResponse.ToString());
             return thisUserprofile;
         }
+        public static void EditUserprofile(int id, Userprofile userprofile)
+        {
+            var client = new RestClient("http://localhost:5000/api/");
+            var request = new RestRequest("userprofiles/" + id, Method.PUT);
+            request.AddJsonBody(userprofile);
+            var response = new RestResponse();
+
+            Task.Run(async () =>
+            {
+                response = await GetAsyncResponse.GetResponseContentAsync(client, request) as RestResponse;
+            }).Wait();
+        }
+
 
 
     }
