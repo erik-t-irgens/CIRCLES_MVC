@@ -1,0 +1,32 @@
+@{
+    Layout = "_LayoutLanding";
+    ViewData["Title"] = "LOGIN";
+}
+
+@using Circles_MVC.ViewModels
+
+@model LoginViewModel
+
+<div id="loginCircle">
+    <div class="text-center" id="loginTitle">
+        <h1 class="display-4">LOGIN</h1>
+        <h4>START CONNECTING</h4>
+        @using (Html.BeginForm())
+        {
+
+            <label for="UserName">User Name: </label>
+            @Html.TextBoxFor(m => m.UserName)
+
+            @Html.LabelFor(m => m.Password)
+            @Html.PasswordFor(m => m.Password)
+
+            <a href="/Home/Landing"><button class="btn btn-outline-secondary button-styling-solid" value="Log In" type="submit">LOGIN</button></a>   
+        }
+        <a href="/ApplicationUser/Register"><button class="btn btn-outline-secondary button-styling-solid" type="submit" >RESGISTER</button></a>
+        
+        
+    </div>
+</div>
+
+<div id="landingCircle2"></div>
+<div id="landingCircle3"></div>

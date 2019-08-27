@@ -2966,11 +2966,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views/OtherUsers/Index.cshtml",
-      "TargetPath": "Views/OtherUsers/Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "Views/Home/Privacy.cshtml",
       "TargetPath": "Views/Home/Privacy.cshtml",
       "FileKind": "mvc"
@@ -3003,6 +2998,11 @@
     {
       "FilePath": "Views/ApplicationUser/Register.cshtml",
       "TargetPath": "Views/ApplicationUser/Register.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/ApplicationUser/Login.cshtml",
+      "TargetPath": "Views/ApplicationUser/Login.cshtml",
       "FileKind": "mvc"
     },
     {

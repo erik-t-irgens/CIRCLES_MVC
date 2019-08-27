@@ -40,3 +40,4 @@
 /Users/Guest/Desktop/Circles_MVC/obj/Debug/netcoreapp2.2/Circles_MVC.pdb
 /Users/Guest/Desktop/Circles_MVC/obj/Debug/netcoreapp2.2/Circles_MVC.csproj.CopyComplete
 /Users/Guest/Desktop/CIRCLES_MVC/obj/Debug/netcoreapp2.2/Razor/Views/UserProfile/Details.g.cshtml.cs
+/Users/Guest/Desktop/CIRCLES_MVC/obj/Debug/netcoreapp2.2/Razor/Views/ApplicationUser/Login.g.cshtml.cs

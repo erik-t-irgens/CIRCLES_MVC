@@ -2,24 +2,33 @@
     Layout = "_LayoutLanding";
     ViewData["Title"] = "REGISTER";
 }
+@using Circles_MVC.ViewModels
+@using Microsoft.AspNetCore.Identity
+@model RegisterViewModel
 
 <div id="loginCircle">
     <div class="text-center" id="loginTitle">
         <h1 class="display-4">REGISTER</h1>
         <h4>START CONNECTING</h4>
-        <form>
-            <input type="text" class="form-control login-input" placeholder="Name">
-            
-            <input type="text" class="form-control login-input" placeholder="Email">
-             
-            <input type="text" class="form-control login-input" placeholder="Password"> 
-            
-            <input type="text" class="form-control login-input" placeholder="Confirm password"> 
-            
-            
-        </form>
+        @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+        {
+            <label for="UserName">User Name: </label>
+            @Html.TextBoxFor(user => user.UserName)
+
+            @Html.LabelFor(user => user.Email)
+            @Html.TextBoxFor(user => user.Email)
+
+            @Html.LabelFor(user => user.Password)
+            @Html.PasswordFor(user => user.Password)
+
+            @Html.LabelFor(user=> user.ConfirmPassword)
+            @Html.PasswordFor(user=> user.ConfirmPassword)
+
+
+            <a href="/Home/Landing"><button class="btn btn-outline-secondary button-styling-solid" value="Register" type="submit" >REGISTER</button></a>
+        }
         <!-- move this back into form once we implement database ??-->
-        <a href="/Home/Landing"><button class="btn btn-outline-secondary button-styling-solid" type="submit" >REGISTER</button></a>
+        <a href="/ApplicationUser/Login"><button class="btn btn-outline-secondary button-styling-solid" type="submit" >LOG IN INSTEAD</button></a>
         
     </div>
 </div>
