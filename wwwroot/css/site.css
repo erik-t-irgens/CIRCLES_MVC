@@ -133,32 +133,48 @@ body {
   
 }
 
-#homeCircle{
-  height: 150px;
-  width: 150px;
+#homeCircle {
+  height: 200px;
+  width: 200px;
   border-radius: 100%;
   display: inline-block;
-  z-index: 1;
-  position: relative;
+  z-index: 2;
+  position: fixed;
   text-align: center;
   opacity: .8;
   background-image: url("https://www.onlygfx.com/wp-content/uploads/2017/07/circle-brush-stroke-4.png");
   background-position: center;
   background-size: cover;
-
-  
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+#empty-pixels {
+  height: 45px;
+  width: 45px;
 }
 
 #homeCircle:Hover, .navCircle:Hover {
   transition: all .1s ease-in-out;
   transform: scale(1.02) rotate(.1turn);
-  box-shadow: 3px 1px 2px black;
   opacity: 1;
 }
 
+#navCircleContainer {
+  max-width: 600px;
+  margin-right: auto;
+  position: fixed;
+  top:10px;
+  bottom:0;
+  left:200px;
+  right:0;
+
+}
+
 .navCircle{
-  height: 100px;
-  width: 100px;
+  height: 75px;
+  width: 75px;
   background-color: white;
   border-radius: 100%;
   display: inline-block;
@@ -192,8 +208,16 @@ body {
 
 @media (max-width: 768px) {
   #landingCircle {
-    height: 1500;
-    width: 1500;
+    height: 1500px;
+    width: 1500px;
+  }
+  #homeCircle {
+    height: 150px;
+    width: 150px;
+  }
+
+  #navCircleContainer{
+    left:140px;
   }
 
 }
@@ -222,4 +246,11 @@ body {
   align-items: right;
   align-self: right;
   align-content: right;
+}
+
+.unorderedStyle {
+  position: relative;
+  z-index: 1;
+  margin-left: 150px;
+  margin-right: auto;
 }
