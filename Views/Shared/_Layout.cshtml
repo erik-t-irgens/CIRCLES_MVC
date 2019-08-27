@@ -21,18 +21,26 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Circles_MVC</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                
+                <a class="navbar-brand" id="homeCircle" asp-area="" asp-controller="Home" asp-action="Index"></a>
+                <button class="navbar-toggler navCircle" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link navCircle navHome" asp-area="" asp-controller="Home" asp-action="Landing"></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link navCircle navProfile" asp-area="" asp-controller="UserProfile" asp-action="Index"></a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link navCircle navCircles" asp-area="" asp-controller="Circles" asp-action="Index"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navCircle navBrowse" asp-area="" asp-controller="OtherUsers" asp-action="Index"></a>
                         </li>
                     </ul>
                 </div>

@@ -84,14 +84,14 @@ body {
   margin-left: 50px;
   position: absolute;
   margin-top: 250px;
-  font-family: 'Baloo Chettan', cursive;
+  font-family: 'Monoton', cursive;
   color: #6e6e6e;
 }
 
 #loginTitle {
   z-index: 0;
   margin-top: 15%;
-  font-family: 'Baloo Chettan', cursive;
+  font-family: 'Monoton', cursive;
   color: #6e6e6e;
 }
 
@@ -133,6 +133,56 @@ body {
   
 }
 
+#homeCircle{
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  display: inline-block;
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  opacity: .8;
+  background-image: url("https://www.onlygfx.com/wp-content/uploads/2017/07/circle-brush-stroke-4.png");
+  background-position: center;
+  background-size: cover;
+
+  
+}
+
+#homeCircle:Hover, .navCircle:Hover {
+  transition: all .1s ease-in-out;
+  transform: scale(1.02);
+  box-shadow: 2px 2px 2px gray;
+  opacity: 1;
+}
+
+.navCircle{
+  height: 100px;
+  width: 100px;
+  background-color: white;
+  border-radius: 100%;
+  display: inline-block;
+  z-index: 1;
+  position: relative;
+  border: 5px solid #6e6e6e;
+  margin-right: 5px;
+  text-align: center;
+  opacity: .7;
+  background-position: center;
+  background-size: cover;
+}
+.navProfile {
+  background-image: url("https://www.searchpng.com/wp-content/uploads/2019/02/Deafult-Profile-Pitcher.png");
+}
+.navHome {
+  background-image: url("https://www.stickpng.com/assets/thumbs/588a6660d06f6719692a2d16.png");
+}
+.navCircles {
+  background-image: url("https://image.flaticon.com/icons/png/512/38/38832.png");
+}
+.navBrowse {
+  background-image: url("https://www.trzcacak.rs/myfile/full/170-1706693_where-to-find-us-find-logo-png.png");
+}
 
 
 .image-rounded {
@@ -161,4 +211,9 @@ body {
 
 .navbar {
   background-color: #00ffff;
+  z-index: 0;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
 }
