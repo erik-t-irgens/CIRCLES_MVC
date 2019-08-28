@@ -41,3 +41,6 @@
 /Users/Guest/Desktop/CIRCLES_MVC/obj/Debug/netcoreapp2.2/Razor/Views/UserProfile/Details.g.cshtml.cs
 /Users/Guest/Desktop/CIRCLES_MVC/obj/Debug/netcoreapp2.2/Razor/Views/Home/Login.g.cshtml.cs
 /Users/Guest/Desktop/CIRCLES_MVC/obj/Debug/netcoreapp2.2/Razor/Views/Home/Register.g.cshtml.cs
+/Users/Guest/Desktop/CIRCLES_MVC/obj/Debug/netcoreapp2.2/Razor/Areas/Identity/Pages/_ValidationScriptsPartial.g.cshtml.cs
+/Users/Guest/Desktop/CIRCLES_MVC/obj/Debug/netcoreapp2.2/Razor/Areas/Identity/Pages/_ViewStart.g.cshtml.cs
+/Users/Guest/Desktop/CIRCLES_MVC/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_LoginPartial.g.cshtml.cs

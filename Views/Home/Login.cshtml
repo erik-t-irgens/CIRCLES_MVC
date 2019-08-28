@@ -11,20 +11,8 @@
     <div class="text-center" id="loginTitle">
         <h1 class="display-4">LOGIN</h1>
         <h4>START CONNECTING</h4>
-        @using (Html.BeginForm())
-        {
-
-            <label for="UserName">User Name: </label>
-            <input id="UserName" name="UserName" type="text" required value="">
-            <br>
-
-            <label for="Password">Password: </label>
-           <input id="Password" name="Password" type="text" required value="">
-            <br>
-
-            <a href="/Home/Landing"><button class="btn btn-outline-secondary button-styling-solid" value="Log In" type="submit">LOGIN</button></a>   
-        }
-        <a href="/Home/Register"><button class="btn btn-outline-secondary button-styling-solid" type="submit" >RESGISTER</button></a>
+        <partial name="_LoginPartial" />
+        
         
         
     </div>
