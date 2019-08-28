@@ -2961,11 +2961,6 @@
   "RootNamespace": "Circles_MVC",
   "Documents": [
     {
-      "FilePath": "Views/Account/Index.cshtml",
-      "TargetPath": "Views/Account/Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "Views/UserProfile/Details.cshtml",
       "TargetPath": "Views/UserProfile/Details.cshtml",
       "FileKind": "mvc"

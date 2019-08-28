@@ -79,7 +79,7 @@ namespace Circles_MVC.Controllers
         public async Task<ActionResult> LogOff()
         {
             await _signInManager.SignOutAsync();
-            return RedirectToAction("Index");
+            return RedirectToAction("Login");
         }
     }
 }

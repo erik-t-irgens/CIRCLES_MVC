@@ -59,7 +59,6 @@
 /Users/Guest/Desktop/CIRCLES_MVC_MASTER/CIRCLES_MVC/obj/Debug/netcoreapp2.2/Circles_MVC.TagHelpers.input.cache
 /Users/Guest/Desktop/CIRCLES_MVC_MASTER/CIRCLES_MVC/obj/Debug/netcoreapp2.2/Circles_MVC.TagHelpers.output.cache
 /Users/Guest/Desktop/CIRCLES_MVC_MASTER/CIRCLES_MVC/obj/Debug/netcoreapp2.2/Circles_MVC.RazorCoreGenerate.cache
-/Users/Guest/Desktop/CIRCLES_MVC_MASTER/CIRCLES_MVC/obj/Debug/netcoreapp2.2/Razor/Views/Account/Index.g.cshtml.cs
 /Users/Guest/Desktop/CIRCLES_MVC_MASTER/CIRCLES_MVC/obj/Debug/netcoreapp2.2/Razor/Views/Account/Login.g.cshtml.cs
 /Users/Guest/Desktop/CIRCLES_MVC_MASTER/CIRCLES_MVC/obj/Debug/netcoreapp2.2/Razor/Views/Account/Register.g.cshtml.cs
 /Users/Guest/Desktop/CIRCLES_MVC_MASTER/CIRCLES_MVC/obj/Debug/netcoreapp2.2/Razor/Views/Circles/Create.g.cshtml.cs

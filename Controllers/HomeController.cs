@@ -5,9 +5,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Circles_MVC.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Circles_MVC.Controllers
 {
+
     public class HomeController : Controller
     {
         public IActionResult Index()
@@ -19,7 +21,7 @@ namespace Circles_MVC.Controllers
         {
             return View();
         }
-
+        [Authorize]
         public IActionResult Landing()
         {
             return View();
