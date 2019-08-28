@@ -15,7 +15,6 @@
             <label for="UserName">User Name: </label>
             <input data-val="true" data-val-required="The User Name field is required." id="UserName" name="UserName" type="text" required value="">
             <br>
-
             @Html.LabelFor(user => user.Email)
             <input data-val="true" data-val-required="The Email field is required." id="Email" data-val-email="Must be a valid email address!" name="Email" type="text" required value="">
             <br>
@@ -26,10 +25,11 @@
             <input data-val="true" data-val-equalto="The password and confirmation password do not match." data-val-equalto-other="*.Password" id="ConfirmPassword" name="ConfirmPassword" required type="password">
             <br>
 
-            <a href="/Home/Landing"><button class="btn btn-outline-secondary button-styling-solid" value="Register" type="submit" >REGISTER</button></a>
+            <input class="btn btn-outline-secondary button-styling-solid" value="Register" type="submit"/>
         }
+        <p>@ViewBag.ErrorMessage</p>
         <!-- move this back into form once we implement database ??-->
-        <a href="/Home/Login"><button class="btn btn-outline-secondary button-styling-solid" type="submit" >LOG IN INSTEAD</button></a>
+        <a href="/Account/Login"><button class="btn btn-outline-secondary button-styling-solid" type="submit" >LOG IN INSTEAD</button></a>
         <div class="field-validation-valid" data-valmsg-for="controlName" data-valmsg-replace="true"></div>
     </div>
 </div>

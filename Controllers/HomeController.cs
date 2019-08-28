@@ -20,16 +20,6 @@ namespace Circles_MVC.Controllers
             return View();
         }
 
-        public IActionResult Login()
-        {
-            return View();
-        }
-
-        public IActionResult Register()
-        {
-            return View();
-        }
-
         public IActionResult Landing()
         {
             return View();

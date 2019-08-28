@@ -1,5 +1,5 @@
 {
-  "FilePath": "/Users/Guest/Desktop/CIRCLES_MVC/Circles_MVC.csproj",
+  "FilePath": "/Users/Guest/Desktop/CIRCLES_MVC_MASTER/CIRCLES_MVC/Circles_MVC.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-2.1",
     "LanguageVersion": "2.1",
@@ -2961,6 +2961,11 @@
   "RootNamespace": "Circles_MVC",
   "Documents": [
     {
+      "FilePath": "Views/Account/Index.cshtml",
+      "TargetPath": "Views/Account/Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "Views/UserProfile/Details.cshtml",
       "TargetPath": "Views/UserProfile/Details.cshtml",
       "FileKind": "mvc"
@@ -2996,16 +3001,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views/ApplicationUser/Register.cshtml",
-      "TargetPath": "Views/ApplicationUser/Register.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "Views/ApplicationUser/Login.cshtml",
-      "TargetPath": "Views/ApplicationUser/Login.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "Views/Shared/Footer.cshtml",
       "TargetPath": "Views/Shared/Footer.cshtml",
       "FileKind": "mvc"
@@ -3026,8 +3021,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views/ApplicationUser/Index.cshtml",
-      "TargetPath": "Views/ApplicationUser/Index.cshtml",
+      "FilePath": "Views/Account/Register.cshtml",
+      "TargetPath": "Views/Account/Register.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -3053,6 +3048,11 @@
     {
       "FilePath": "Views/Shared/_Layout.cshtml",
       "TargetPath": "Views/Shared/_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views/Account/Login.cshtml",
+      "TargetPath": "Views/Account/Login.cshtml",
       "FileKind": "mvc"
     },
     {

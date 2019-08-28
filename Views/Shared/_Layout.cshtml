@@ -18,7 +18,11 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
 </head>
+@using System.Security.Claims;
+
 <body>
+    @if (User.Identity.IsAuthenticated)
+    {
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm">
             <div class="container">
@@ -42,13 +46,18 @@
         </nav>
         <a class="navbar-brand" id="profileCircle" asp-area="" asp-controller="UserProfile" asp-action="Edit"></a>
     </header>
+    }
+    else
+    {
+        
+    }
     <div class="container-fluid">
         <partial name="_CookieConsentPartial" />
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-
+    
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2019 - CIRCLES - @DateTime.Now.ToString("MM/dd/yyyy hh:mm tt")
@@ -76,5 +85,7 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @RenderSection("Scripts", required: false)
+      
+
 </body>
 </html>
