@@ -47,6 +47,7 @@ body {
   margin-bottom: 60px;
   margin: 0;
   padding: 0;
+  background-color: #6e6e6e;
 }
 .footer {
   position: absolute;
@@ -162,7 +163,7 @@ body {
   
 }
 
-#homeCircle {
+#profileCircle {
   height: 200px;
   width: 200px;
   border-radius: 100%;
@@ -170,24 +171,27 @@ body {
   z-index: 2;
   position: fixed;
   text-align: center;
-  opacity: .8;
-  background-image: url("https://www.onlygfx.com/wp-content/uploads/2017/07/circle-brush-stroke-4.png");
+  opacity: .9;
+  background-image: url("https://www.stickpng.com/assets/images/585e4bf3cb11b227491c339a.png");
   background-position: center;
   background-size: cover;
   top:0;
   bottom:0;
   left:0;
   right:0;
+  color: white;
+  /* background-color:  #999999;  */
 }
 #empty-pixels {
-  height: 45px;
-  width: 45px;
+  height: 65px;
+  width: 65px;
 }
 
-#homeCircle:Hover, .navCircle:Hover {
+#profileCircle:Hover, .navCircle:Hover {
   transition: all .1s ease-in-out;
-  transform: scale(1.02) rotate(.1turn);
+  transform: translateY(5px);
   opacity: 1;
+  color: white;
 }
 
 #navCircleContainer {
@@ -195,8 +199,8 @@ body {
   margin-right: auto;
   position: fixed;
   top:10px;
-  bottom:0;
-  left:200px;
+  /* bottom:0; */
+  left:210px;
   right:0;
 
 }
@@ -205,29 +209,30 @@ body {
   height: 75px;
   width: 75px;
   background-color: white;
+  color: rgb(0, 0, 0);
   border-radius: 100%;
   display: inline-block;
   z-index: 1;
   position: relative;
-  border: 5px solid #6e6e6e;
   margin-right: 5px;
   text-align: center;
-  opacity: .7;
-  background-position: center;
-  background-size: cover;
+  opacity: 1;
+
 }
 .navProfile {
-  background-image: url("https://www.searchpng.com/wp-content/uploads/2019/02/Deafult-Profile-Pitcher.png");
+  background-color: #fff565;
 }
 .navHome {
-  background-image: url("https://www.stickpng.com/assets/thumbs/588a6660d06f6719692a2d16.png");
+  background-color: #00ffff;
 }
 .navCircles {
-  background-image: url("https://image.flaticon.com/icons/png/512/38/38832.png");
+  background-color: #ff791f;
 }
 .navBrowse {
-  background-image: url("https://www.trzcacak.rs/myfile/full/170-1706693_where-to-find-us-find-logo-png.png");
+  background-color: #6aff65;
 }
+
+
 
 
 .image-rounded {
@@ -235,18 +240,70 @@ body {
   z-index: -4;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px){
   #landingCircle {
     height: 1500px;
     width: 1500px;
   }
-  #homeCircle {
-    height: 150px;
-    width: 150px;
+  #profileCircle {
+    height: 140px;
+    width: 140px;
   }
 
   #navCircleContainer{
     left:140px;
+  }
+}
+  @media (max-width: 420px){
+  #landingCircle {
+    height: 1500px;
+    width: 1500px;
+  }
+  #profileCircle {
+    height: 100px;
+    width: 100px;
+  }
+
+  .navCircle {
+    height: 50px;
+    width: 50px;
+    
+  }
+
+  #empty-pixels {
+    height: 45px;
+    width: 45px;
+  }
+
+  #navCircleContainer{
+    left:105px;
+  }
+
+}
+
+@media (max-width: 320px) {
+  #landingCircle {
+    height: 1500px;
+    width: 1500px;
+  }
+  #profileCircle {
+    height: 100px;
+    width: 100px;
+  }
+
+  .navCircle {
+    height: 45px;
+    width: 45px;
+
+  }
+
+  #empty-pixels {
+    height: 45px;
+    width: 45px;
+  }
+
+  #navCircleContainer{
+    left:105px;
   }
 
 }
@@ -288,7 +345,7 @@ input {
 -------------------------------------------------- */
 
 .navbar {
-  background-color: #00ffff;
+  background-color: #505050;
   z-index: 0;
   top:0;
   bottom:0;

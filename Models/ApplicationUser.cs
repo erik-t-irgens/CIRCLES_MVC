@@ -13,18 +13,7 @@ namespace Circles_MVC.Models
 {
     public class ApplicationUser : IdentityUser
     {
-        public static void Register(ApplicationUser applicationuser)
-        {
-            var client = new RestClient("http://localhost:5000/api/");
-            var request = new RestRequest("applicationuser", Method.POST);
-            request.AddJsonBody(applicationuser);
-            var response = new RestResponse();
 
-            Task.Run(async () =>
-            {
-                response = await GetAsyncResponse.GetResponseContentAsync(client, request) as RestResponse;
-            }).Wait();
-        }
 
     }
 }

@@ -6,13 +6,20 @@
 // using System.Collections.Generic;
 // using System.Linq;
 
-// namespace Circles_API.Controllers
+// namespace Circles_MVC.Controllers
 // {
 //     public class ApplicationUserController : Controller
 //     {
-//         public ActionResult Login()
+
+//         private readonly Circles_MVCContext _db;
+//         private readonly UserManager<ApplicationUser> _userManager;
+//         private readonly SignInManager<ApplicationUser> _signInManager;
+
+//         public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, Circles_MVCContext db)
 //         {
-//             return View();
+//             _userManager = userManager;
+//             _signInManager = signInManager;
+//             _db = db;
 //         }
 
 //         [HttpPost]

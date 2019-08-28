@@ -15,14 +15,16 @@
         {
 
             <label for="UserName">User Name: </label>
-            @Html.TextBoxFor(m => m.UserName)
+            <input id="UserName" name="UserName" type="text" required value="">
+            <br>
 
-            @Html.LabelFor(m => m.Password)
-            @Html.PasswordFor(m => m.Password)
+            <label for="Password">Password: </label>
+           <input id="Password" name="Password" type="text" required value="">
+            <br>
 
             <a href="/Home/Landing"><button class="btn btn-outline-secondary button-styling-solid" value="Log In" type="submit">LOGIN</button></a>   
         }
-        <a href="/ApplicationUser/Register"><button class="btn btn-outline-secondary button-styling-solid" type="submit" >RESGISTER</button></a>
+        <a href="/Home/Register"><button class="btn btn-outline-secondary button-styling-solid" type="submit" >RESGISTER</button></a>
         
         
     </div>
