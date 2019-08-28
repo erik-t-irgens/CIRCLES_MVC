@@ -40,6 +40,8 @@ namespace Circles_MVC.Controllers
                 IdentityResult result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    var newUserprofile = new Userprofile { Name = model.UserName, Gender = "", Age = 0, Bio = "", Photo = "", Location = "", ApplicationUserId = user.Id };
+                    Userprofile.CreateUserProfile(newUserprofile);
                     return RedirectToAction("Login");
                 }
                 else

@@ -1,20 +1,21 @@
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Circles_MVC.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace Circles_MVC.Controllers
 {
+    [Authorize]
     public class CirclesController : Controller
     {
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Errors()
+        public CirclesController(UserManager<ApplicationUser> userManager)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            _userManager = userManager;
         }
 
 
@@ -36,20 +37,33 @@ namespace Circles_MVC.Controllers
         //     return View("Index", prevDestinations);
         // }
 
-        public IActionResult Details(int id)
+        public async Task<ActionResult> Details(int id)
         {
-            var thisCircle = Circle.GetThisCircle(id);
-            return View(thisCircle);
+            var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var currentUser = await _userManager.FindByIdAsync(userId);
+            var particularCircle = Circle.GetThisCircle(id);
+            if (particularCircle.ApplicationUserId == currentUser.Id)
+            {
+                return View(particularCircle);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Account");
+            }
         }
 
         public ActionResult Create()
         {
+
             return View();
         }
 
         [HttpPost]
-        public IActionResult Create(Circle circle)
+        public async Task<ActionResult> Create(Circle circle)
         {
+            var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var currentUser = await _userManager.FindByIdAsync(userId);
+            circle.ApplicationUserId = currentUser.Id;
             Circle.CreateCircle(circle);
             return RedirectToAction("Index");
         }
@@ -61,10 +75,20 @@ namespace Circles_MVC.Controllers
         }
 
 
-        public IActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
+            var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var currentUser = await _userManager.FindByIdAsync(userId);
             var particularCircle = Circle.GetThisCircle(id);
-            return View(particularCircle);
+            if (particularCircle.ApplicationUserId == currentUser.Id)
+            {
+                return View(particularCircle);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
         }
 
         [HttpPost]
@@ -72,6 +96,12 @@ namespace Circles_MVC.Controllers
         {
             Circle.EditCircle(id, circle);
             return RedirectToAction("Index");
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Errors()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

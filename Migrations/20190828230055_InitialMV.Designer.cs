@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Circles_MVC.Migrations
 {
     [DbContext(typeof(Circles_MVCContext))]
-    [Migration("20190828204342_Initial")]
-    partial class Initial
+    [Migration("20190828230055_InitialMV")]
+    partial class InitialMV
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

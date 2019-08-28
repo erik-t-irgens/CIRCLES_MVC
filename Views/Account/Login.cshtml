@@ -14,7 +14,7 @@
         @using (Html.BeginForm("Login", "Account", FormMethod.Post))
         {
             <label for="UserName">User Name: </label>
-            <input data-val="true" data-val-required="The User Name field is required." id="UserName" name="UserName" type="text" required value="">
+            <input data-val="true" data-val-required="The User Name field is required." id="UserName" name="UserName" type="text" required value=""><br>
                        
             @Html.LabelFor(user => user.Password)
             <input data-val="true" data-val-required="The Password field is required." id="Password" name="Password" type="password" required value="">
@@ -22,7 +22,7 @@
 
             <a href="/Home/Landing"><button class="btn btn-outline-secondary button-styling-solid" value="Log In" type="submit" >LOG IN</button></a>
         }
-        
+        <a href="/Account/Register"><button class="btn btn-outline-secondary button-styling-solid" type="submit" >REGISTER</button></a>
         
         
     </div>
