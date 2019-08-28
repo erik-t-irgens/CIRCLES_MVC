@@ -21,11 +21,24 @@ namespace Circles_MVC.Models
         public string Bio { get; set; }
         public string Photo { get; set; }
         public string Location { get; set; }
-        public int ApplicationUserId { get; set; }
+        public string ApplicationUserId { get; set; }
 
         public ICollection<TagUserprofile> Tags { get; set; }
         public ICollection<CircleUserprofile> Circles { get; set; }
 
+
+        public static void CreateUserProfile(Userprofile userprofile)
+        {
+            var client = new RestClient("http://localhost:5000/api/");
+            var request = new RestRequest("userprofiles/", Method.POST);
+            request.AddJsonBody(userprofile);
+            var response = new RestResponse();
+
+            Task.Run(async () =>
+            {
+                response = await GetAsyncResponse.GetResponseContentAsync(client, request) as RestResponse;
+            }).Wait();
+        }
 
         public static List<Userprofile> GetAllUserprofiles()
         {
