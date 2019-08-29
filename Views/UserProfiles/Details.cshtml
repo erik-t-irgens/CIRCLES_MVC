@@ -6,7 +6,7 @@
 <div class="container-fluid">   
     <div id="userDetails">
         <h2 id="userNameDisplay">@Model.Name</h2>
-        <div id="userprofilesPhoto" style="background-image: url(http://lorempixel.com/400/400/people)"></div>
+        <div id="userprofilesPhoto" style="background-image: url(@Html.DisplayFor(model => Model.Photo))"></div>
         <div class="card userCardStyle">
             <div class="card bg-secondary userInformationCard">
                 <p class="userInformationTitle">GENDER</p>
