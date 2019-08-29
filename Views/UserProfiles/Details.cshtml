@@ -4,14 +4,13 @@
 
 @model Circles_MVC.Models.Userprofile
     
-
-<h2>Userprofile - @Model.Name</h2>
-
-
+<div  id="userDetails">
+<h2>@Model.Name</h2>
 <p>Name: @Html.DisplayFor(model => Model.Name)</p>
-<!-- @using (Html.BeginForm())
-{
-    @Html.LabelFor(model => model.Circles)
-    @Html.DropDownList("CircleId")
-    <input type="submit" value="Add to Circle" class="btn btn-default" />
-} -->
+<p>Gender: @Html.DisplayFor(model => Model.Gender)</p>
+<p>Age: @Html.DisplayFor(model => Model.Age)</p>
+<p>Bio: @Html.DisplayFor(model => Model.Bio)</p>
+<p>Location: @Html.DisplayFor(model => Model.Location)</p>
+
+
+</div>

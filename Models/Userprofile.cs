@@ -60,7 +60,7 @@ namespace Circles_MVC.Models
         public static List<Userprofile> GetAllUserprofilesNext()
         {
             var client = new RestClient("http://localhost:5000/api/");
-            var request = new RestRequest("userprofiles/next", Method.GET);
+            var request = new RestRequest("userprofiles/next/", Method.GET);
             var response = new RestResponse();
 
             Task.Run(async () =>

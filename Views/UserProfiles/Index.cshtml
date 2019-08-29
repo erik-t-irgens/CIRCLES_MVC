@@ -8,14 +8,24 @@
 <h2>All Userprofiles</h2>
 <hr />
 
+<div class="container-fluid userprofileContainer">
+    <a  href="/userprofiles/Prev"><button id="paginationPrev" class="button-styling-solid userprofilesButton"><</button></a>
+    <div class="row userprofilesRow">
+    
 @foreach (var userprofile in Model)
 {
-    <div class="container-fluid row userprofilesRow">
+    <div class="userprofileCol col-md-2">
+        <a href="@Url.Action("Details", new { id = userprofile.UserprofileId})"><div class="entireuserButton">
         <div class="userprofilesCircle">
-
-            <p class="userprofilesName">@Html.ActionLink($"{userprofile.Name}", "Details", new { id = userprofile.UserprofileId})</p>
+            <div class="userprofilesPhoto" style="background-image: url(https://www.stickpng.com/assets/images/585e4bf3cb11b227491c339a.png)"></div>
+            <p class="userprofilesName">@userprofile.Name</p>
         </div>
+        </div></a>
     </div>
 }
 
-<a href="/userprofiles/Prev">< Previous</a> | <a href="/userprofiles/Next">Next &gt;</a>
+</div>
+<a  href="/userprofiles/Next"><button id="paginationNext" class="button-styling-solid userprofilesButton">></button></a>
+</div>
+
+
