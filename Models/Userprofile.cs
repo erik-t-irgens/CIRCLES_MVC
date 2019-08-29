@@ -29,7 +29,7 @@ namespace Circles_MVC.Models
 
         public static void CreateUserProfile(Userprofile userprofile)
         {
-            var client = new RestClient("http://localhost:5000/api/");
+            var client = new RestClient("http://circlesserver001.azurewebsites.net/api/");
             var request = new RestRequest("userprofiles/", Method.POST);
             request.AddJsonBody(userprofile);
             var response = new RestResponse();
@@ -42,7 +42,7 @@ namespace Circles_MVC.Models
 
         public static List<Userprofile> GetAllUserprofiles()
         {
-            var client = new RestClient("http://localhost:5000/api/");
+            var client = new RestClient("http://circlesserver001.azurewebsites.net/api/");
             var request = new RestRequest("userprofiles/", Method.GET);
             var response = new RestResponse();
 
@@ -60,7 +60,7 @@ namespace Circles_MVC.Models
 
         public static Userprofile GetThisUserprofile(int id)
         {
-            var client = new RestClient("http://localhost:5000/api/");
+            var client = new RestClient("http://circlesserver001.azurewebsites.net/api/");
             var request = new RestRequest("userprofiles/" + id, Method.GET);
             var response = new RestResponse();
 
@@ -75,7 +75,7 @@ namespace Circles_MVC.Models
         }
         public static void EditUserprofile(int id, Userprofile userprofile)
         {
-            var client = new RestClient("http://localhost:5000/api/");
+            var client = new RestClient("http://circlesserver001.azurewebsites.net/api/");
             var request = new RestRequest("userprofiles/" + id, Method.PUT);
             request.AddJsonBody(userprofile);
             var response = new RestResponse();
