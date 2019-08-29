@@ -100,19 +100,19 @@ namespace Circles_MVC.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult AddUser(int id, int userprofileId)
-        {
-            var particularCircle = Circle.GetThisCircle(id);
-            if (particularCircle.ApplicationUserId == currentUser.Id)
-            {
-                return View(particularCircle);
-            }
-            else
-            {
-                return RedirectToAction("Login", "Account");
-            }
+        // public ActionResult AddUser(int id, int userprofileId)
+        // {
+        //     var particularCircle = Circle.GetThisCircle(id);
+        //     if (particularCircle.ApplicationUserId == currentUser.Id)
+        //     {
+        //         return View(particularCircle);
+        //     }
+        //     else
+        //     {
+        //         return RedirectToAction("Login", "Account");
+        //     }
 
-        }
+        // }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Errors()
