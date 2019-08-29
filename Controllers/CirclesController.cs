@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace Circles_MVC.Controllers
 {
@@ -18,11 +19,13 @@ namespace Circles_MVC.Controllers
             _userManager = userManager;
         }
 
-
-        public IActionResult Index()
+        public async Task<ActionResult> Index()
         {
+            var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var currentUser = await _userManager.FindByIdAsync(userId);
             var allCircles = Circle.GetAllCircles();
-            return View(allCircles);
+            var yourCircles = allCircles.Where(x => x.ApplicationUserId == currentUser.Id);
+            return View(yourCircles);
         }
 
         // public IActionResult IndexNext()
