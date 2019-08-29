@@ -10,6 +10,8 @@
     <div class="form-group">
         <label for="Name">Name</label>
         <input name="Name" type="text" class="form-control" value="@Model.Name" required>
+        @Html.HiddenFor(model => model.ApplicationUserId)
+        @Html.HiddenFor(model => model.UserprofileId)
     </div>
 
 

@@ -10,7 +10,12 @@
 
 @foreach (var userprofile in Model)
 {
-    <ul>
-        <li>Name: @Html.ActionLink($"{userprofile.Name}", "Details", new { id = userprofile.UserprofileId})</li>
-    </ul>
+    <div class="container-fluid row userprofilesRow">
+        <div class="userprofilesCircle">
+
+            <p class="userprofilesName">@Html.ActionLink($"{userprofile.Name}", "Details", new { id = userprofile.UserprofileId})</p>
+        </div>
+    </div>
 }
+
+<a href="/userprofiles/Prev">< Previous</a> | <a href="/userprofiles/Next">Next &gt;</a>

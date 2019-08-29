@@ -8,7 +8,7 @@ using Circles_MVC.Models;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
-
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 
 namespace Circles_MVC.Controllers
@@ -32,7 +32,7 @@ namespace Circles_MVC.Controllers
             return View(otherUserprofiles);
         }
 
-        public async Task<ActionResult> IndexNext()
+        public async Task<ActionResult> Next()
         {
             var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var currentUser = await _userManager.FindByIdAsync(userId);
@@ -41,7 +41,7 @@ namespace Circles_MVC.Controllers
             return View("Index", otherUserprofiles);
         }
 
-        public async Task<ActionResult> IndexPrev()
+        public async Task<ActionResult> Prev()
         {
             var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var currentUser = await _userManager.FindByIdAsync(userId);
@@ -50,8 +50,12 @@ namespace Circles_MVC.Controllers
             return View("Index", otherUserprofiles);
         }
 
-        public IActionResult Details(int id)
+        public async Task<ActionResult> Details(int id)
         {
+            var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var currentUser = await _userManager.FindByIdAsync(userId);
+            var allCircles = Circle.GetAllCircles();
+            // ViewBag.MyCircles = new SelectList((allCircles.Where(x => x.ApplicationUserId == currentUser.Id)), "CircleId", "Name");
             var thisUserprofile = Userprofile.GetThisUserprofile(id);
             return View(thisUserprofile);
         }
