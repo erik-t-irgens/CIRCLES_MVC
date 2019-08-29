@@ -6,24 +6,24 @@
 @using Microsoft.AspNetCore.Identity
 @model RegisterViewModel
 
-<div id="loginCircle">
-    <div class="text-center" id="loginTitle">
+<div id="registerCircle">
+    <div class="text-center" id="registerTitle">
         <h1 class="display-4">REGISTER</h1>
         <h4>START CONNECTING</h4>
         <div id="registerContainer"> 
             @using (Html.BeginForm("Register", "Account", FormMethod.Post))
             {
                 <div id="registerFormStyle">
-                    <label for="UserName">User Name: </label>
+                    <label for="UserName" >User Name: </label><br>
                     <input data-val="true" data-val-required="The User Name field is required." id="UserName" name="UserName" type="text" required value="">
                     <br>
-                    @Html.LabelFor(user => user.Email)
+                    <label for="Email">Email: </label><br>
                     <input data-val="true" data-val-required="The Email field is required." id="Email" data-val-email="Must be a valid email address!" name="Email" type="text" required value="">
                     <br>
-                    @Html.LabelFor(user => user.Password)
+                    <label for="Password">Password: </label><br>
                     <input data-val="true" data-val-required="The Password field is required." id="Password" name="Password" type="password" required value="">
                     <br>
-                    @Html.LabelFor(user=> user.ConfirmPassword)
+                    <label for="ConfirmPassword">Confirm Password: </label><br>
                     <input data-val="true" data-val-equalto="The password and confirmation password do not match." data-val-equalto-other="*.Password" id="ConfirmPassword" name="ConfirmPassword" required type="password">
                     <br>
                 </div>
