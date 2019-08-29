@@ -48,6 +48,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #6e6e6e;
+  font-family: 'Rubik Mono One', sans-serif;
 }
 .footer {
   position: absolute;
@@ -182,6 +183,97 @@ body {
   
 }
 
+#loginCircle2{
+  height: 90vw;
+  width: 90vw;
+  margin-top: -25%;
+  margin-right: 2.5%;
+  margin-left: 2.5%;
+  background-color: #00ffff;
+  border-radius: 100%;
+  display: inline-block;
+  position: sticky;
+  z-index: -2;
+  
+}
+
+#loginCircle3{
+  height: 90vw;
+  width: 90vw;
+  text-align: center;
+  margin-right: 2.5%;
+  margin-left: 2.5%;
+  background-color: #00cccc;
+  border-radius: 100%;
+  display: inline-block;
+  position: absolute;
+  z-index: 0;
+}
+
+#infoCircle{
+  height: 90vw;
+  width: 90vw;
+  text-align: center;
+  margin-right: 2.5%;
+  margin-left: 2.5%;
+  background-color: #00cccc;
+  border-radius: 100%;
+  display: inline-block;
+  position: absolute;
+  z-index: 0;
+}
+
+#infoCircle2{
+  height: 25%;
+  width: 25%;
+  text-align: center;
+  margin-left: -13%;
+  background-color: #fff565;
+  border-radius: 100%;
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+
+}
+#infoCircle3{
+  height: 20%;
+  width: 20%;
+  text-align: center;
+  margin-top: 20%;
+  margin-left: 5%;
+  background-color: #6aff65;
+  border-radius: 100%;
+  display: inline-block;
+  position: absolute;
+  z-index: 2;
+
+}
+#infoCircle4{
+  height: 20%;
+  width: 20%;
+  text-align: center;
+  margin-left: -30%;
+  margin-top: 15%;
+  background-color: #ff791f;
+  border-radius: 100%;
+  display: inline-block;
+  position: absolute;
+  z-index: 3;
+}
+.infoTitle{
+  margin-top: 10%;
+  font-size: 40px;
+}
+
+.infoText {
+  align-self: center;
+  margin-right: 25%;
+  margin-left: 25%;
+  font-size: 15px;
+  margin-top:33%;
+}
+
+
 #profileCircle {
   height: 200px;
   width: 200px;
@@ -249,12 +341,22 @@ body {
 }
 .navHome {
   background-color: #00ffff;
+  background-image: url("https://icon-library.net/images/info-icon-transparent/info-icon-transparent-28.jpg");
+    background-position: center;
+  background-size: cover;
 }
 .navCircles {
   background-color: #ff791f;
+    background-position: center;
+  background-size: cover;
+    background-image: url("https://cdn2.iconfinder.com/data/icons/navigation-14/512/select-selection-intersection-area-sets-circle-round-512.png");
+  
 }
 .navBrowse {
   background-color: #6aff65;
+    background-position: center;
+  background-size: cover;
+    background-image: url("https://icon-library.net/images/person-icon-png-transparent/person-icon-png-transparent-7.jpg");
 }
 
 
@@ -533,6 +635,8 @@ input {
   width: 50%;
 }
 
+
+
 .button-styling-solid, #button-started {
 
   border: 4px solid #6e6e6e;
@@ -540,6 +644,10 @@ input {
   width: 50%;
   background-color: #535353;
   margin-bottom: 10px;
+}
+
+.deleteButton {
+  width: 100%;
 }
 
 .userprofilesButton {

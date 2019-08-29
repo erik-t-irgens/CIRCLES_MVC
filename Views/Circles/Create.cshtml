@@ -3,16 +3,22 @@
     Layout = "_Layout";
 }
 
-<h1>Add a New Circle</h1>
+<h1 class="categoryTitle">Add a New Circle</h1>
 <hr>
+<div class= "container-fluid userInformationCard">
 @using (Html.BeginForm())
 {
     <div class="form-group">
-        <label for="Name">Name</label>
+        <label for="Name" class="userInformationDisplay">Name</label>
         <input name="Name" type="text" class="form-control" required>
     </div>
 
 
-    <input type="submit" value="Add Circle" class="btn btn-primary"/><br><br>
-    @Html.ActionLink("Cancel", "Index")
+    <input type="submit" value="CREATE CIRCLE" class="btn button-styling-solid"/><br><br>
 }
+<a href="/circles/"><button class="btn button-styling-solid">CANCEL</button></a>
+</div>
+
+<div id="landingCircle6"></div>
+<div id="landingCircle5"></div>
+<div id="landingCircle4"></div>

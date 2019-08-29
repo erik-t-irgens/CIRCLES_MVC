@@ -4,19 +4,33 @@
 
 @model Circles_MVC.Models.Circle
 
-<h2>Circle - @Model.Name</h2>
+<h2 class="categoryTitle">Circle - @Model.Name</h2>
 
-<ul>
-    @foreach (var join in Model.Userprofiles)
-    {
-        <li>@Html.ActionLink(@join.Userprofile.Name, "Details", "Userprofiles", new { id = join.Userprofile.UserprofileId })</li>
 
-        @using (Html.BeginForm("RemoveUser", "Circles"))
+<div class="container-fluid userprofileContainer">
+    <div class="row d-flex justify-content-around userprofilesRow">
+@foreach (var join in Model.Userprofiles)
+{
+    <div class="userprofileCol col-md-2">
+        <a href="@Url.Action("Details", "Userprofiles", new { id = join.Userprofile.UserprofileId})"><div class="entireuserButton">
+            <div class="userprofilesCircle">
+                <div class="userprofilesPhoto" style="background-image: url(@join.Userprofile.Photo)"></div>
+                <p class="userprofilesName">@join.Userprofile.Name</p>
+                              @using (Html.BeginForm("RemoveUser", "Circles"))
         {
             @Html.Hidden("joinId", @join.CircleUserprofileId)
             @Html.Hidden("circleId", @Model.CircleId)
-            <input type="submit" value="Delete"/>
+            <input type="submit" value="-" class="button-styling-solid btn-danger deleteButton"/>
         }
-    }
-</ul>
+            </div>
+
+        </div></a>
+      
+    </div>
+}
+</div>
+
+<div id="loginCircle2"></div>
+<div id="landingCircle2"></div>
+<div id="landingCircle3"></div>
 
