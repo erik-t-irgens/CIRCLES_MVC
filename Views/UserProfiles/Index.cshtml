@@ -9,9 +9,9 @@
 <hr />
 
 <div class="container-fluid userprofileContainer">
-    <a  href="/userprofiles/Prev"><button id="paginationPrev" class="button-styling-solid userprofilesButton"><</button></a>
-    <div class="row userprofilesRow">
     
+    <div class="row d-flex justify-content-around userprofilesRow">
+    <a  href="/userprofiles/Prev"><button id="paginationPrev" class="button-styling-solid userprofilesButton"><</button></a>
 @foreach (var userprofile in Model)
 {
     <div class="userprofileCol col-md-2">
@@ -23,9 +23,10 @@
         </div></a>
     </div>
 }
-
-</div>
 <a  href="/userprofiles/Next"><button id="paginationNext" class="button-styling-solid userprofilesButton">></button></a>
+</div>
+
+
 </div>
 
 

@@ -40,6 +40,22 @@ namespace Circles_MVC.Models
             }).Wait();
         }
 
+        public static List<Userprofile> GetAllUserprofiles()
+        {
+            var client = new RestClient("http://localhost:5000/api/");
+            var request = new RestRequest("userprofiles/", Method.GET);
+            var response = new RestResponse();
+
+            Task.Run(async () =>
+            {
+                response = await GetAsyncResponse.GetResponseContentAsync(client, request) as RestResponse;
+            }).Wait();
+
+            JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(response.Content);
+            var userprofileList = JsonConvert.DeserializeObject<List<Userprofile>>(jsonResponse.ToString());
+            return userprofileList;
+        }
+
         public static List<Userprofile> GetAllUserprofilesFirst()
         {
             var client = new RestClient("http://localhost:5000/api/");

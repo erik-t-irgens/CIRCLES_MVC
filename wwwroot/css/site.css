@@ -318,7 +318,7 @@ body {
 
 }
 
-/* User styles
+/* Userprofile styles
 -------------------------------------------------- */
 .userprofilesCircle {
   max-height: 250px;
@@ -370,7 +370,9 @@ body {
   align-items: center;
   align-content: center;
   align-self: center;
-  width: 80vw;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .userprofilesButton {
@@ -442,6 +444,10 @@ body {
 
 .userCardStyleEdit {
   border: 3px solid #fff565 !important;
+}
+
+#paginationPrev {
+
 }
 
 

@@ -60,33 +60,32 @@ namespace Circles_MVC.Controllers
             return View(thisUserprofile);
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Errors()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
-
-        public async Task<ActionResult> Edit(int id)
+        public async Task<ActionResult> Edit()
         {
             var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var currentUser = await _userManager.FindByIdAsync(userId);
-            var particularUserprofile = Userprofile.GetThisUserprofile(id);
-            if (particularUserprofile.ApplicationUserId == currentUser.Id)
+            var myUserprofile = Userprofile.GetAllUserprofiles().FirstOrDefault(x => x.ApplicationUserId == currentUser.Id);
+            if (myUserprofile.ApplicationUserId == currentUser.Id)
             {
-                return View(particularUserprofile);
+                return View(myUserprofile);
             }
             else
             {
                 return RedirectToAction("Login", "Account");
             }
-
         }
 
         [HttpPost]
-        public IActionResult Edit(int id, Userprofile userprofile)
+        public IActionResult Edit(Userprofile userprofile)
         {
-            Userprofile.EditUserprofile(id, userprofile);
+            Userprofile.EditUserprofile(userprofile.UserprofileId, userprofile);
             return RedirectToAction("Index");
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Errors()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }
