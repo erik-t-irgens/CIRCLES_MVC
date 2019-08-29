@@ -9,15 +9,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Circles_MVC.Migrations
 {
     [DbContext(typeof(Circles_MVCContext))]
-    [Migration("20190828230055_InitialMV")]
-    partial class InitialMV
+    [Migration("20190828234723_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.6-servicing-10079")
-                .HasAnnotation("Relational:MaxIdentifierLength", 64);
+                .HasAnnotation("ProductVersion", "2.2.6-servicing-10079");
 
             modelBuilder.Entity("Circles_MVC.Models.ApplicationUser", b =>
                 {
