@@ -54,8 +54,8 @@ namespace Circles_MVC.Controllers
         {
             var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var currentUser = await _userManager.FindByIdAsync(userId);
-            // var allCircles = Circle.GetAllCircles();
-            // ViewBag.MyCircles = new SelectList((allCircles.Where(x => x.ApplicationUserId == currentUser.Id)), "CircleId", "Name");
+            var myCircles = Circle.GetAllCircles().Where(x => x.ApplicationUserId == currentUser.Id);
+            ViewBag.CircleId = new SelectList(myCircles, "CircleId", "Name");
             var thisUserprofile = Userprofile.GetThisUserprofile(id);
             return View(thisUserprofile);
         }

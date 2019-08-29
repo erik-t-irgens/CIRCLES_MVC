@@ -91,7 +91,6 @@ namespace Circles_MVC.Controllers
             {
                 return RedirectToAction("Login", "Account");
             }
-
         }
 
         [HttpPost]
@@ -99,6 +98,20 @@ namespace Circles_MVC.Controllers
         {
             Circle.EditCircle(id, circle);
             return RedirectToAction("Index");
+        }
+
+        public ActionResult AddUser(int id, int userprofileId)
+        {
+            var particularCircle = Circle.GetThisCircle(id);
+            if (particularCircle.ApplicationUserId == currentUser.Id)
+            {
+                return View(particularCircle);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

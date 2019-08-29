@@ -17,8 +17,14 @@
             <p class="userInformationTitle">BIO</p>
             <p class="userInformationDisplay">@Html.DisplayFor(model => Model.Bio)</p>
             <p class="userInformationTitle">LOCATION</p>
-            <p class="userInformationDisplay">@Html.DisplayFor(model => Model.Location)</p>
+            <p class="userInformationDisplay">@Html.DisplayFor(model => Model.Location)</p><hr>
         </div>
+        @using (Html.BeginForm()) 
+            {
+        @Html.Label("Add to a Circle")<br>
+        @Html.DropDownList("CircleId")
+        <input type="submit" value="+" class="userprofileButton">
+            }
     </div>
 </div>
 </div>
