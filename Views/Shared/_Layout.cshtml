@@ -31,13 +31,10 @@
                     <a class="nav-link navCircle btn navHome" asp-area="" asp-controller="Home" asp-action="Landing"></a>
                     </div> 
                     <div class="col-3">
-                    <a class="nav-link navCircle btn navProfile" asp-area="" asp-controller="UserProfile" asp-action="Details"></a>
-                    </div> 
-                    <div class="col-3">
                     <a class="nav-link navCircle btn navCircles" asp-area="" asp-controller="Circles" asp-action="Index"></a>
                     </div> 
                     <div class="col-3">
-                    <a class="nav-link navCircle btn navBrowse" asp-area="" asp-controller="Userprofile" asp-action="Index"></a>
+                    <a class="nav-link navCircle btn navBrowse" asp-area="" asp-controller="Userprofiles" asp-action="Index"></a>
                     </div> 
                 </div>
                 @using (Html.BeginForm("LogOff", "Account"))
@@ -46,9 +43,9 @@
                 }
             </div>
         </nav>
-        <a class="navbar-brand" id="profileCircle" asp-area="" asp-controller="UserProfile" asp-action="Edit"></a>
+        <a class="navbar-brand" id="profileCircle" asp-area="" asp-controller="Userprofiles" asp-action="Edit"></a>
     </header>
-    <div class="container-fluid">
+    <div class="container-fluid mainBodyContent">
         <partial name="_CookieConsentPartial" />
         <main role="main" class="pb-3">
             @RenderBody()

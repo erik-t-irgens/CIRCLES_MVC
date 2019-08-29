@@ -182,9 +182,15 @@ body {
   color: white;
   /* background-color:  #999999;  */
 }
+
+
+
 #empty-pixels {
   height: 65px;
   width: 65px;
+}
+.mainBodyContent {
+  margin-top: 130px;
 }
 
 #profileCircle:Hover, .navCircle:Hover {
@@ -250,6 +256,10 @@ body {
     width: 140px;
   }
 
+  .mainBodyContent {
+    margin-top: 75px;
+  }
+
   #navCircleContainer{
     left:140px;
   }
@@ -308,6 +318,140 @@ body {
 
 }
 
+/* Userprofile styles
+-------------------------------------------------- */
+.userprofilesCircle {
+  max-height: 250px;
+  max-width: 225px;
+  height: 25vw;
+  width: 22.5vw;
+  display: inline-block;
+  border: 2px solid #6aff65;
+  border-radius: 5%;
+  text-align: center;
+  opacity: .9;
+  color: white;
+  text-shadow: 1px 1px 1px #535353;
+  background-color:  #5e5e5e; 
+  box-shadow: 3px 3px 3px #303030;
+}
+
+.userprofilesPhoto {
+  height: 80%;
+  width: 80%;
+  border-radius: 100%;
+  display: inline-block;
+  text-shadow: 1px 1px 1px #535353;
+  background-color:  #b9b9b9; 
+  background-position: center;
+  background-size: cover;
+  box-shadow: 3px 3px 3px #303030;
+}
+
+.userprofilesName {
+  margin-top: 10px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #303030;
+  background-color: rgb(107, 107, 107);
+}
+
+.userprofilesContainer {
+ text-align: center;
+
+}
+
+.userprofilesCol {
+  height: 300px;
+  width: 300px;
+}
+.userprofilesRow {
+  background-color: #ffffff8a;
+  height: 300px;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.userprofilesButton {
+  background-color: #535353;
+    border-radius: 100%;
+    width: 50px !important;
+    height: 50px !important;
+    font-weight: bolder;
+}
+
+.entireuserButton:Hover {
+  transition: all .1s ease-in-out;
+  transform: translateY(5px);
+}
+
+.userprofilesButton:Hover {
+  background-color: #ff791f;
+}
+
+#userDetails {
+  text-align: center;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+
+#userprofilesPhoto {
+  height: 25vw;
+  width: 25vw;
+  max-height: 300px;
+  max-width:300px;
+  border-radius: 100%;
+  display: inline-block;
+  text-shadow: 1px 1px 1px #535353;
+  background-color:  #b9b9b9; 
+  background-position: center;
+  background-size: cover;
+  box-shadow: 3px 3px 3px #303030;
+}
+
+#userNameDisplay {
+  font-size: 50px;
+  color: white;
+    font-family: 'Monoton', cursive;
+}
+
+.userInformationDisplay {
+  font-size: 15px;
+  color: white;
+}
+.userInformationCard {
+  width: 80%;
+    margin-left: 10%;
+  margin-right: 10%;
+
+}
+.userInformationTitle {
+  background-color: #303030;
+}
+
+.userCardStyle, .userCardStyleEdit {
+  color: white;
+  font-weight: bolder;
+  font-size: 25px;
+  border: 3px solid #00ffff;
+  background-color: #303030;
+}
+
+.userCardStyleEdit {
+  border: 3px solid #fff565 !important;
+}
+
+#paginationPrev {
+
+}
+
+
+
 
 /* Form styles
 -------------------------------------------------- */
@@ -336,9 +480,16 @@ input {
   margin-bottom: 10px;
 }
 
+.userprofilesButton {
+  color: white;
+  background-color: #535353;
+  border-radius: 50%;
+}
+
 #button-started {
   width: 90%;
 }
+
 
 
 /* Main pages styles

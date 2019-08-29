@@ -127,6 +127,17 @@ namespace Circles_MVC.Models
             }).Wait();
         }
 
+        // Add another user to your circle
+        public static void AddUser(int circleId, int userprofileId)
+        {
+            var client = new RestClient("http://localhost:5000/api/");
+            var request = new RestRequest("circles/" + circleId + "/userprofiles/" + userprofileId, Method.POST);
+            var response = new RestResponse();
 
+            Task.Run(async () =>
+            {
+                response = await GetAsyncResponse.GetResponseContentAsync(client, request) as RestResponse;
+            }).Wait();
+        }
     }
 }

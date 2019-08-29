@@ -352,3 +352,32 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+bin/Debug/netcoreapp2.2/Circles_MVC.dll
+bin/Debug/netcoreapp2.2/Circles_MVC.pdb
+bin/Debug/netcoreapp2.2/Circles_MVC.Views.dll
+bin/Debug/netcoreapp2.2/Circles_MVC.Views.pdb
+obj/Circles_MVC.csproj.nuget.cache
+obj/Circles_MVC.csproj.nuget.g.props
+obj/project.assets.json
+obj/Debug/netcoreapp2.2/Circles_MVC.dll
+obj/Debug/netcoreapp2.2/Circles_MVC.pdb
+obj/Debug/netcoreapp2.2/Circles_MVC.Views.dll
+obj/Debug/netcoreapp2.2/Circles_MVC.Views.pdb
+obj/Debug/netcoreapp2.2/Circles_MVC.assets.cache
+obj/Debug/netcoreapp2.2/Circles_MVC.csproj.FileListAbsolute.txt
+obj/Debug/netcoreapp2.2/project.razor.json
+obj/Debug/netcoreapp2.2/Razor/Views/_ViewImports.g.cshtml.cs
+obj/Debug/netcoreapp2.2/Razor/Views/_ViewStart.g.cshtml.cs
+obj/Debug/netcoreapp2.2/Razor/Views/Circles/Create.g.cshtml.cs
+obj/Debug/netcoreapp2.2/Razor/Views/Circles/Details.g.cshtml.cs
+obj/Debug/netcoreapp2.2/Razor/Views/Circles/Edit.g.cshtml.cs
+obj/Debug/netcoreapp2.2/Razor/Views/Circles/Index.g.cshtml.cs
+obj/Debug/netcoreapp2.2/Razor/Views/Home/Index.g.cshtml.cs
+obj/Debug/netcoreapp2.2/Razor/Views/Home/Landing.g.cshtml.cs
+obj/Debug/netcoreapp2.2/Razor/Views/Home/Privacy.g.cshtml.cs
+obj/Debug/netcoreapp2.2/Razor/Views/Shared/Error.g.cshtml.cs
+obj/Debug/netcoreapp2.2/Razor/Views/Shared/Footer.g.cshtml.cs
+obj/Debug/netcoreapp2.2/Razor/Views/Shared/_CookieConsentPartial.g.cshtml.cs
+obj/Debug/netcoreapp2.2/Razor/Views/Shared/_Layout.g.cshtml.cs
+obj/Debug/netcoreapp2.2/Razor/Views/Shared/_LayoutLanding.g.cshtml.cs
+obj/Debug/netcoreapp2.2/Razor/Views/Shared/_ValidationScriptsPartial.g.cshtml.cs

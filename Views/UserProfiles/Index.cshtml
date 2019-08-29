@@ -1,0 +1,32 @@
+  
+@{
+    Layout = "_Layout";
+}
+
+@model IEnumerable<Circles_MVC.Models.Userprofile>
+
+<h2>All Userprofiles</h2>
+<hr />
+
+<div class="container-fluid userprofileContainer">
+    
+    <div class="row d-flex justify-content-around userprofilesRow">
+    <a  href="/userprofiles/Prev"><button id="paginationPrev" class="button-styling-solid userprofilesButton"><</button></a>
+@foreach (var userprofile in Model)
+{
+    <div class="userprofileCol col-md-2">
+        <a href="@Url.Action("Details", new { id = userprofile.UserprofileId})"><div class="entireuserButton">
+        <div class="userprofilesCircle">
+            <div class="userprofilesPhoto" style="background-image: url(http://lorempixel.com/400/400/people)"></div>
+            <p class="userprofilesName">@userprofile.Name</p>
+        </div>
+        </div></a>
+    </div>
+}
+<a  href="/userprofiles/Next"><button id="paginationNext" class="button-styling-solid userprofilesButton">></button></a>
+</div>
+
+
+</div>
+
+

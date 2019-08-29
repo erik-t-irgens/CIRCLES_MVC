@@ -56,6 +56,57 @@ namespace Circles_MVC.Models
             return userprofileList;
         }
 
+        public static List<Userprofile> GetAllUserprofilesFirst()
+        {
+            var client = new RestClient("http://localhost:5000/api/");
+            var request = new RestRequest("userprofiles/first", Method.GET);
+            var response = new RestResponse();
+
+            Task.Run(async () =>
+            {
+                response = await GetAsyncResponse.GetResponseContentAsync(client, request) as RestResponse;
+            }).Wait();
+
+            Console.WriteLine(response);
+            JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(response.Content);
+            var userprofileList = JsonConvert.DeserializeObject<List<Userprofile>>(jsonResponse.ToString());
+            return userprofileList;
+        }
+
+        public static List<Userprofile> GetAllUserprofilesNext()
+        {
+            var client = new RestClient("http://localhost:5000/api/");
+            var request = new RestRequest("userprofiles/next/", Method.GET);
+            var response = new RestResponse();
+
+            Task.Run(async () =>
+            {
+                response = await GetAsyncResponse.GetResponseContentAsync(client, request) as RestResponse;
+            }).Wait();
+
+            Console.WriteLine(response);
+            JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(response.Content);
+            var userprofileList = JsonConvert.DeserializeObject<List<Userprofile>>(jsonResponse.ToString());
+            return userprofileList;
+        }
+
+        public static List<Userprofile> GetAllUserprofilesPrev()
+        {
+            var client = new RestClient("http://localhost:5000/api/");
+            var request = new RestRequest("userprofiles/prev", Method.GET);
+            var response = new RestResponse();
+
+            Task.Run(async () =>
+            {
+                response = await GetAsyncResponse.GetResponseContentAsync(client, request) as RestResponse;
+            }).Wait();
+
+            Console.WriteLine(response);
+            JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(response.Content);
+            var userprofileList = JsonConvert.DeserializeObject<List<Userprofile>>(jsonResponse.ToString());
+            return userprofileList;
+        }
+
 
 
         public static Userprofile GetThisUserprofile(int id)

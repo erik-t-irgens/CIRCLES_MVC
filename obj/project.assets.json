@@ -12186,11 +12186,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Guest/Desktop/CIRCLES_MVC_MASTER/CIRCLES_MVC/Circles_MVC.csproj",
+      "projectUniqueName": "/Users/Guest/Desktop/CIRCLES_MVC/Circles_MVC.csproj",
       "projectName": "Circles_MVC",
-      "projectPath": "/Users/Guest/Desktop/CIRCLES_MVC_MASTER/CIRCLES_MVC/Circles_MVC.csproj",
+      "projectPath": "/Users/Guest/Desktop/CIRCLES_MVC/Circles_MVC.csproj",
       "packagesPath": "/Users/Guest/.nuget/packages/",
-      "outputPath": "/Users/Guest/Desktop/CIRCLES_MVC_MASTER/CIRCLES_MVC/obj/",
+      "outputPath": "/Users/Guest/Desktop/CIRCLES_MVC/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

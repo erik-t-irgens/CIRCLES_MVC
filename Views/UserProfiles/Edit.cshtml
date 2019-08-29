@@ -1,0 +1,35 @@
+@model Circles_MVC.Models.Userprofile
+@{
+    Layout = "_Layout";
+}
+
+ <div class="container-fluid">   
+<div  id="userDetails">
+    <h2 id="userNameDisplay">@Model.Name</h2>
+    <div id="userprofilesPhoto" style="background-image: url(http://lorempixel.com/400/400/people)"></div>
+    <div class="card userCardStyleEdit">
+        
+        <div class="card bg-secondary userInformationCard">
+            @using (Html.BeginForm()) 
+            {
+                @Html.HiddenFor(model => model.ApplicationUserId)
+                @Html.HiddenFor(model => model.UserprofileId)
+                <p for="Name" class="userInformationTitle">NAME</p>
+                <p class="userInformationDisplay"><input name="Name" type="text" class="form-control" value="@Model.Name"></p>
+                <p for="Gender" class="userInformationTitle">GENDER</p>
+                <p class="userInformationDisplay"><input name="Gender" type="text" class="form-control" value="@Model.Gender"></p>
+                <p class="userInformationTitle">AGE</p>
+                <p class="userInformationDisplay"><input name="Age" type="text" class="form-control" value="@Model.Age"></p>
+                <p class="userInformationTitle">BIO</p>
+                <p class="userInformationDisplay"><input name="Bio" type="text" class="form-control" value="@Model.Bio"></p>
+                <p class="userInformationTitle">LOCATION</p>
+                <p class="userInformationDisplay"><input name="Location" type="text" class="form-control" value="@Model.Location"></p>
+
+                <input type="submit" value="Save Changes" class="btn btn-primary"/><br><br>
+                @Html.ActionLink("Cancel", "Index")
+            }
+            
+        </div>
+    </div>
+</div>
+</div>
