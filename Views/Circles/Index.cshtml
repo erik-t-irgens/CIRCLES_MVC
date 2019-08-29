@@ -5,12 +5,27 @@
 
 @model IEnumerable<Circles_MVC.Models.Circle>
 
-<h2>All Circles</h2>
+<h2 class="categoryTitle">All Circles</h2>
 <hr />
-
+<div class="container-fluid circlesContainer">
+    
+    <div class="row d-flex justify-content-around circlesRow">
+    
 @foreach (var circle in Model)
 {
-    <ul>
-        <li>Name: @Html.ActionLink($"{circle.Name}", "Details", new { id = circle.CircleId})</li>
-    </ul>
+    <div class="circlesCol col-md-2">
+        <a href="@Url.Action("Details", new { id = circle.CircleId})"><div class="entireCircleButton">
+        <div class="circleCircle">
+            <p class="circleName">@circle.Name</p>
+        </div>
+        </div></a>
+    </div>
 }
+
+</div>
+
+
+</div>
+<div id="landingCircle6"></div>
+<div id="landingCircle5"></div>
+<div id="landingCircle4"></div>

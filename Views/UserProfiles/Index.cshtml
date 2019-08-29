@@ -5,7 +5,7 @@
 
 @model IEnumerable<Circles_MVC.Models.Userprofile>
 
-<h2>All Userprofiles</h2>
+<h2 class="categoryTitle">All Userprofiles</h2>
 <hr />
 
 <div class="container-fluid userprofileContainer">
@@ -17,7 +17,7 @@
     <div class="userprofileCol col-md-2">
         <a href="@Url.Action("Details", new { id = userprofile.UserprofileId})"><div class="entireuserButton">
         <div class="userprofilesCircle">
-            <div class="userprofilesPhoto" style="background-image: url(http://lorempixel.com/400/400/people)"></div>
+            <div class="userprofilesPhoto" style="background-image: url(@userprofile.Photo)"></div>
             <p class="userprofilesName">@userprofile.Name</p>
         </div>
         </div></a>

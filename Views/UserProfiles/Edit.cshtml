@@ -6,7 +6,7 @@
  <div class="container-fluid">   
 <div  id="userDetails">
     <h2 id="userNameDisplay">@Model.Name</h2>
-    <div id="userprofilesPhoto" style="background-image: url(http://lorempixel.com/400/400/people)"></div>
+    <div id="userprofilesPhoto" style="background-image: url(@Model.Photo)"></div>
     <div class="card userCardStyleEdit">
         
         <div class="card bg-secondary userInformationCard">
@@ -25,9 +25,14 @@
                 <p class="userInformationTitle">LOCATION</p>
                 <p class="userInformationDisplay"><input name="Location" type="text" class="form-control" value="@Model.Location"></p>
 
-                <input type="submit" value="Save Changes" class="btn btn-primary"/><br><br>
-                @Html.ActionLink("Cancel", "Index")
+                <p for="Photo" class="userInformationTitle">PHOTO LINK</p>
+                <p class="userInformationDisplay"><input name="Photo" type="text" class="form-control" value="@Model.Photo"></p>
+<hr>
+                <input type="submit" value="SAVE" class=" button-styling-solid"/>
+                <a href="/userprofiles/"><button class="button-styling-solid">CANCEL</button></a>
             }
+
+            
             
         </div>
     </div>

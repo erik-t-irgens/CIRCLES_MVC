@@ -118,7 +118,7 @@ body {
 /* Circle elements styles
 -------------------------------------------------- */
 
-#landingCircle{
+#landingCircle, #landingCircle6{
   height: 1700px;
   width: 1700px;
   background-color: #00ffff;
@@ -130,7 +130,11 @@ body {
   margin: 15% 60% 85% 40%;
 }
 
-#landingCircle2{
+#landingCircle6{
+    background-color: #fff565;
+}
+
+#landingCircle2, #landingCircle5{
   height: 40vh;
   width: 40vh;
   background-color: #fff565;
@@ -143,7 +147,11 @@ body {
   margin: 5% 80% 95% 20%;
 }
 
-#landingCircle3{
+#landingCircle5 {
+    background-color: #00ffff;
+}
+
+#landingCircle3, #landingCircle4{
   height: 500px;
   width: 500px;
   background-color: rgb(255, 121, 31);
@@ -155,6 +163,10 @@ body {
   top: 0;
   right: 0;
   margin: 5vh 80% 95vh 20%;
+}
+
+#landingCircle4{
+    background-color: #6aff65;
 }
 
 #loginCircle, #registerCircle {
@@ -225,7 +237,7 @@ body {
   color: rgb(0, 0, 0);
   border-radius: 100%;
   display: inline-block;
-  z-index: 1;
+  z-index: 3;
   position: relative;
   margin-right: 5px;
   text-align: center;
@@ -295,19 +307,22 @@ body {
   #navCircleContainer{
     left:105px;
   }
-#registerTitle {
-  margin-top: 5px;
-  font-size: 10px;
-}
-.display-4 {
-  margin-top: 0px;
-  font-size: 15px !important;
-}
-h4 {
-  display: none;
+  #registerTitle {
+    margin-top: 5px;
+    font-size: 10px;
+  }
 }
 
-
+@media (max-width: 620px){
+    .registerDisplay, .loginDisplay {
+    margin-top: 0px;
+    font-size: 15px !important;
+  }
+  #registerTitle {
+      margin-top: 5px;
+      font-size: 10px;
+  }
+  
 }
 
 @media (max-width: 320px) {
@@ -337,9 +352,12 @@ h4 {
 
 }
 
+
+
+
 /* Userprofile styles
 -------------------------------------------------- */
-.userprofilesCircle {
+.userprofilesCircle, .circleCircle {
   max-height: 250px;
   max-width: 225px;
   height: 25vw;
@@ -355,6 +373,20 @@ h4 {
   box-shadow: 3px 3px 3px #303030;
 }
 
+.circleCircle {
+    border-radius: 100%;
+    max-height: 250px;
+    max-width: 250px;
+    height: 25vw;
+    width: 25vw;
+    border: 0px;
+    background-color: #5e5e5e;
+}
+
+.circleCircle:Hover {
+  background-color: #ff791f;
+}
+
 .userprofilesPhoto {
   height: 80%;
   width: 80%;
@@ -367,23 +399,27 @@ h4 {
   box-shadow: 3px 3px 3px #303030;
 }
 
-.userprofilesName {
+.userprofilesName, .circleName {
   margin-top: 10px;
   font-weight: bold;
   text-shadow: 1px 1px 1px #303030;
   background-color: rgb(107, 107, 107);
 }
 
-.userprofilesContainer {
+.circleName {
+  margin-top: 45%;
+}
+
+.userprofilesContainer, .circlesContainer {
  text-align: center;
 
 }
 
-.userprofilesCol {
+.userprofilesCol, .circlesCol {
   height: 300px;
   width: 300px;
 }
-.userprofilesRow {
+.userprofilesRow{
   background-color: #ffffff8a;
   height: 300px;
   align-items: center;
@@ -394,7 +430,15 @@ h4 {
   margin-right: 5%;
 }
 
-.userprofilesButton {
+.circlesRow{
+  background-color: #ffffff8a;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 5px;
+}
+
+.userprofilesButton, .circlesButton {
   background-color: #535353;
     border-radius: 100%;
     width: 50px !important;
@@ -402,12 +446,12 @@ h4 {
     font-weight: bolder;
 }
 
-.entireuserButton:Hover {
+.entireuserButton:Hover, .entireCircleButton:Hover {
   transition: all .1s ease-in-out;
   transform: translateY(5px);
 }
 
-.userprofilesButton:Hover {
+.userprofilesButton:Hover, .circlesButton:Hover {
   background-color: #ff791f;
 }
 
@@ -416,6 +460,8 @@ h4 {
   width: 80%;
   margin-left: 10%;
   margin-right: 10%;
+  margin-bottom: 50px;
+  margin-top: -50px;
 
 }
 
@@ -465,9 +511,6 @@ h4 {
   border: 3px solid #fff565 !important;
 }
 
-#paginationPrev {
-
-}
 
 
 
@@ -513,7 +556,16 @@ input {
 
 /* Main pages styles
 -------------------------------------------------- */
+.categoryTitle {
+  /* border: 100px;   */
+  font-family: 'Monoton', cursive;
+  color: white;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  text-shadow: 5px 5px 5px #6e6e6e;
 
+}
 .navbar {
   background-color: #505050;
   z-index: 0;
@@ -521,6 +573,7 @@ input {
   bottom:0;
   left:0;
   right:0;
+  
 }
 
 .collapseableStyle {
