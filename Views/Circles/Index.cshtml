@@ -11,6 +11,8 @@
 @foreach (var circle in Model)
 {
     <ul>
-        <li>Name: @Html.ActionLink($"{circle.Name}", "Details", new { id = circle.CircleId})</li>
+        <li>@Html.ActionLink($"{circle.Name}", "Details", new { id = circle.CircleId})</li>
     </ul>
 }
+
+@Html.ActionLink("New Circle", "Create")

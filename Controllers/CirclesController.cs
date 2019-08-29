@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Linq;
+using System;
 
 namespace Circles_MVC.Controllers
 {
@@ -91,6 +92,14 @@ namespace Circles_MVC.Controllers
             {
                 return RedirectToAction("Login", "Account");
             }
+        }
+
+        [HttpPost]
+        public ActionResult RemoveUser(int joinId, int circleId)
+        {
+            Console.WriteLine("REMOVE USER: " + joinId + " is id and cI: " + circleId);
+            Circle.RemoveUser(joinId);
+            return RedirectToAction("Details", "Circles", new { id = circleId });
         }
 
         [HttpPost]

@@ -6,8 +6,17 @@
 
 <h2>Circle - @Model.Name</h2>
 
+<ul>
+    @foreach (var join in Model.Userprofiles)
+    {
+        <li>@Html.ActionLink(@join.Userprofile.Name, "Details", "Userprofiles", new { id = join.Userprofile.UserprofileId })</li>
 
-    <p>Name: @Html.DisplayFor(model => Model.Name)</p>
-
-
+        @using (Html.BeginForm("RemoveUser", "Circles"))
+        {
+            @Html.Hidden("joinId", @join.CircleUserprofileId)
+            @Html.Hidden("circleId", @Model.CircleId)
+            <input type="submit" value="Delete"/>
+        }
+    }
+</ul>
 

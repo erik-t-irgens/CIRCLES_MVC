@@ -139,5 +139,19 @@ namespace Circles_MVC.Models
                 response = await GetAsyncResponse.GetResponseContentAsync(client, request) as RestResponse;
             }).Wait();
         }
+
+        // Remove user from your circle
+        public static void RemoveUser(int id)
+        {
+            Console.WriteLine("ID IN REMOVE USER in api call  IS: " + id);
+            var client = new RestClient("http://localhost:5000/api/");
+            var request = new RestRequest("circleuserprofiles/" + id, Method.DELETE);
+            var response = new RestResponse();
+
+            Task.Run(async () =>
+            {
+                response = await GetAsyncResponse.GetResponseContentAsync(client, request) as RestResponse;
+            }).Wait();
+        }
     }
 }

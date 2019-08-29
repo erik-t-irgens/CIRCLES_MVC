@@ -55,10 +55,6 @@ namespace Circles_MVC.Controllers
             var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var currentUser = await _userManager.FindByIdAsync(userId);
             var myCircles = Circle.GetAllCircles().Where(x => x.ApplicationUserId == currentUser.Id);
-            foreach (Circle circle in myCircles)
-            {
-                Console.WriteLine("cid" + circle.CircleId);
-            }
             ViewBag.CircleId = new SelectList(myCircles, "CircleId", "Name");
             var thisUserprofile = Userprofile.GetThisUserprofile(id);
             return View(thisUserprofile);
@@ -68,9 +64,6 @@ namespace Circles_MVC.Controllers
         public ActionResult Details(int circleId, int userprofileId)
         {
             Circle.AddUser(circleId, userprofileId);
-            Console.WriteLine("circleId: " + circleId);
-            Console.WriteLine("userprofileID: " + userprofileId);
-            ViewBag.SuccessMessage = "Successfully added to your circle";
             return RedirectToAction("Details", "Userprofiles", new { id = userprofileId });
         }
 
