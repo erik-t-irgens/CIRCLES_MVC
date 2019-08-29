@@ -3,17 +3,22 @@
 }
 
 @model Circles_MVC.Models.Userprofile
-    
+ <div class="container-fluid">   
 <div  id="userDetails">
     <h2 id="userNameDisplay">@Model.Name</h2>
-    <div class="card bg-dark userCardStyle">
-        <p class="userInformationTitle">GENDER</p>
-        <p class="userInformationDisplay">@Html.DisplayFor(model => Model.Gender)</p>
-        <p class="userInformationTitle">AGE</p>
-        <p class="userInformationDisplay">@Html.DisplayFor(model => Model.Age)</p>
-        <p class="userInformationTitle">BIO</p>
-        <p class="userInformationDisplay">@Html.DisplayFor(model => Model.Bio)</p>
-        <p class="userInformationTitle">LOCATION</p>
-        <p class="userInformationDisplay">@Html.DisplayFor(model => Model.Location)</p>
+    <div id="userprofilesPhoto" style="background-image: url(http://lorempixel.com/400/400/people)"></div>
+    <div class="card userCardStyle">
+        
+        <div class="card bg-secondary userInformationCard">
+            <p class="userInformationTitle">GENDER</p>
+            <p class="userInformationDisplay">@Html.DisplayFor(model => Model.Gender)</p>
+            <p class="userInformationTitle">AGE</p>
+            <p class="userInformationDisplay">@Html.DisplayFor(model => Model.Age)</p>
+            <p class="userInformationTitle">BIO</p>
+            <p class="userInformationDisplay">@Html.DisplayFor(model => Model.Bio)</p>
+            <p class="userInformationTitle">LOCATION</p>
+            <p class="userInformationDisplay">@Html.DisplayFor(model => Model.Location)</p>
+        </div>
     </div>
+</div>
 </div>

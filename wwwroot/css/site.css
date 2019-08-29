@@ -398,6 +398,20 @@ body {
 
 }
 
+#userprofilesPhoto {
+  height: 25vw;
+  width: 25vw;
+  max-height: 300px;
+  max-width:300px;
+  border-radius: 100%;
+  display: inline-block;
+  text-shadow: 1px 1px 1px #535353;
+  background-color:  #b9b9b9; 
+  background-position: center;
+  background-size: cover;
+  box-shadow: 3px 3px 3px #303030;
+}
+
 #userNameDisplay {
   font-size: 50px;
   color: white;
@@ -408,6 +422,12 @@ body {
   font-size: 15px;
   color: white;
 }
+.userInformationCard {
+  width: 80%;
+    margin-left: 10%;
+  margin-right: 10%;
+
+}
 .userInformationTitle {
   background-color: #303030;
 }
@@ -416,7 +436,8 @@ body {
   color: white;
   font-weight: bolder;
   font-size: 25px;
-
+  border: 3px solid #00ffff;
+  background-color: #303030;
 }
 
 
