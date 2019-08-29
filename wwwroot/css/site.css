@@ -432,13 +432,19 @@ body {
   background-color: #303030;
 }
 
-.userCardStyle {
+.userCardStyle, .userCardStyleEdit {
   color: white;
   font-weight: bolder;
   font-size: 25px;
   border: 3px solid #00ffff;
   background-color: #303030;
 }
+
+.userCardStyleEdit {
+  border: 3px solid #fff565 !important;
+}
+
+
 
 
 /* Form styles
