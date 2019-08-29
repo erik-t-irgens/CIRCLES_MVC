@@ -390,6 +390,34 @@ body {
   background-color: #ff791f;
 }
 
+#userDetails {
+  text-align: center;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+
+#userNameDisplay {
+  font-size: 50px;
+  color: white;
+    font-family: 'Monoton', cursive;
+}
+
+.userInformationDisplay {
+  font-size: 15px;
+  color: white;
+}
+.userInformationTitle {
+  background-color: #303030;
+}
+
+.userCardStyle {
+  color: white;
+  font-weight: bolder;
+  font-size: 25px;
+
+}
 
 
 /* Form styles

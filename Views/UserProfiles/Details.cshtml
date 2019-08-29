@@ -5,12 +5,15 @@
 @model Circles_MVC.Models.Userprofile
     
 <div  id="userDetails">
-<h2>@Model.Name</h2>
-<p>Name: @Html.DisplayFor(model => Model.Name)</p>
-<p>Gender: @Html.DisplayFor(model => Model.Gender)</p>
-<p>Age: @Html.DisplayFor(model => Model.Age)</p>
-<p>Bio: @Html.DisplayFor(model => Model.Bio)</p>
-<p>Location: @Html.DisplayFor(model => Model.Location)</p>
-
-
+    <h2 id="userNameDisplay">@Model.Name</h2>
+    <div class="card bg-dark userCardStyle">
+        <p class="userInformationTitle">GENDER</p>
+        <p class="userInformationDisplay">@Html.DisplayFor(model => Model.Gender)</p>
+        <p class="userInformationTitle">AGE</p>
+        <p class="userInformationDisplay">@Html.DisplayFor(model => Model.Age)</p>
+        <p class="userInformationTitle">BIO</p>
+        <p class="userInformationDisplay">@Html.DisplayFor(model => Model.Bio)</p>
+        <p class="userInformationTitle">LOCATION</p>
+        <p class="userInformationDisplay">@Html.DisplayFor(model => Model.Location)</p>
+    </div>
 </div>
